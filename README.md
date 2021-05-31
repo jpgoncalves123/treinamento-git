@@ -1,5 +1,4 @@
 # Git
----
 
 >Git é um sistema de controle de versão distribuído gratuito e de código aberto projetado para lidar com tudo, desde projetos pequenos a muito grandes com velocidade e eficiência.  
 Git é fácil de aprender e tem um desempenho extremamente rápido. Ele supera as ferramentas SCM como Subversion, CVS, Perforce e ClearCase com recursos como ramificação local barata, áreas de teste convenientes e vários fluxos de trabalho.
@@ -19,7 +18,6 @@ Muito do aumento da popularida de Git se deve a plataformas como GitHub a qual v
 
 
 ## GitHub
----  
 <br/>
 
 Iremos adotar a plataforma GitHub para este treinamento, se trata da plataforma mais popular do mundo que utiliza Git.  
@@ -28,7 +26,6 @@ O GitHub é amplamente utilizado por grande parte dos projetos open sources e ta
 
 
 ## Conceitos GIt
----  
 <br/>
 
 ### Repositório  
@@ -69,17 +66,19 @@ Após a finalização de um trabalho em um Branch, é necessário realizar o Mer
   - https://git-scm.com/downloads
 - Criar um novo repositório no Github
 - Criar assinatura
-  - ``` 
+  - 
+  ```
   git config --global user.name "Seu usuario"
   git config --global user.email "email@example.com
   ```
 - Clonar repositório
-  - ``` 
+  - 
+  ``` 
   git clone <url_repositorio>
   ```
 
 ## Comandos Git
----  
+  
 <br/>
 
 ### Git Help
@@ -89,7 +88,7 @@ git help
 git help <comando> #Comando o qual deseja maiores informações
 ```
 
-O comando help irá lhe mostrar qual a função de determinado comandos e quais opções podem ser utilizadas junto com aquele comando.   
+O comando help irá lhe mostrar qual a função de determinado comando e quais opções podem ser utilizadas junto com aquele comando.   
 
 #### Git Clone  
 ```
@@ -145,7 +144,7 @@ Remove do próximo *commit* ficheiro que foi incluído no  próximo *commit*.
 ```
 git restore <ficheiro>
 ```  
-Restaura o ficheiro para a última estado dele na Branch. Cuidado, isso irá remover todas suas alterações que não foram realizadas *commit*.
+Restaura o ficheiro para o última estado dele na Branch. Cuidado, isso irá remover todas suas alterações que não foram *committed*.
 
 #### Git Reset
 
@@ -153,21 +152,21 @@ Restaura o ficheiro para a última estado dele na Branch. Cuidado, isso irá rem
 git reset HEAD <ficheiro>
 ```
 
-Remove do próximo *commit* ficheiro que foi incluído no  próximo *commit*. (igual ao comando git restore --staged
+Remove do próximo *commit* ficheiro que foi incluído no  próximo *commit*. (igual ao comando *git restore --staged*)
 
 
 ```
 git reset --hard
 ```
 
-Retorna o repositório para o último commit na branch a qual está posicionado. Cuidado, todas as suas alterações que não sofreram *commit* serão perdidadas.
+Retorna o repositório para o último commit na branch a qual está posicionado. Cuidado, todas as suas alterações que não foram *committed* serão perdidadas.
 
 #### Git Commit
 
 ```
 git commit -m "Mensagem explicativa da alteração realizada"
 ```
-Este comando é como definir um ponto de verificação no processo de desenvolvimento, para o qual você pode voltar mais tarde, se necessário. Quando é feito o *git commit* as alterações são confirmadas apenas no repositório local.  
+Este comando é como definir um ponto de verificação no processo de desenvolvimento, para o qual você pode voltar mais tarde se necessário. Quando é feito o *git commit* as alterações são confirmadas apenas no repositório local.  
 
 #### Git Pull
 ```
@@ -191,42 +190,45 @@ Com branches, vários desenvolvedores podem trabalhar em paralelo no mesmo proje
 
 Pode-se usar o comando git branch para criar, listar e excluir branches.
 
-Criação nova:
-
 ```
 git branch <nome-do-branch>
 ```
 
-Listar branches:
+Cria nova branch.
 
 ```
 git branch
 git branch --list
 ```
 
-Deletar branches:
+Lista branches.
+
 
 ```
 git branch -d <nome-do-branch>
 ```
 
-Replicar branch para o repositório remoto:
+Deleta branches.
+
 
 ```
 git push -u <remote> <nome-da-branch>
 ```   
 
-Listar branches que já foram fundidos (merged) com o master  
+Replica branch para o repositório remoto.
+
 
 ```
 git branch --merged
 ```   
 
-Listar branches que não foram fundidos (merged) com o master  
+Lista branches que já foram fundidos (merged) com o master. 
 
 ```
-git branch --merged
+git branch --no-merged
 ```
+
+Listar branches que não foram fundidos (merged) com o master.
 
 #### Git Checkout
 
@@ -237,67 +239,73 @@ Usamos o git checkout principalmente para alternar de um branch para outro. Tamb
 ```
 git checkout <nome-do-branch>
 ```
+Cria um novo branch.
 
-Criar um novo branch e fazer checkout ao mesmo tempo:
 
 ```
 git checkout -b <nome-da-branch>
 ```
 
-#### Git Log
+Cria um novo branch e fazer checkout ao mesmo tempo.
 
-Exibir histórico do repositório
+#### Git Log  
 
 ```
 git log
 ```   
 
-Exibir histórico com diff das duas últimas alterações.  
+Exibe histórico do repositório
 
 ```
 git log -p -2
 ```
 
-Exibir resumo do histórico (hash completa, autor, data, comentário e qtde de alterações (+/-))   
+Exibe histórico com diff das duas últimas alterações.  
+
+
 ```
 git log --stat
 ```   
 
-Exibir informações resumidas em uma linha (hash completa e comentário)  
+Exibe resumo do histórico (hash completa, autor, data, comentário e qtde de alterações (+/-))   
+
 
 ```
 git log --pretty=oneline
 ```
 
-Exibir histórico modificação de um ficheiro  
+Exibe informações resumidas em uma linha (hash completa e comentário)  
 
 ```
 git log --diff-filter=M -- <ficheiro>
 ```
+
+Exibe histórico modificação de um ficheiro  
 
 
 #### Git Tags
 
 Tags são utilizadas normalmente para marcar o ponto de uma determina versão da aplicação, desta forma, é possível seguir na mesma branch principal e conseguir voltar para pontos de versão apenas utilizando as tags.
 
-Criar uma tag localmente, a tag é criada na branch onde estiver no momento em que executar o comando. 
-
 ```
 git tag v1.1 -m "descricao"
-```
-
+```  
+Cria uma tag localmente, a tag é criada na branch onde estiver no momento em que executar o comando. 
   
-Criar a tag que foi criada localmente no repositório remoto.
+
 
 ```
 git push origin <tag_name>
-```
+```  
 
-Criar todas as tags locais no repositório remoto.
+Criar a tag que foi criada localmente no repositório remoto.
+
 
 ```
 git push origin --tags
 ``` 
+
+Cria todas as tags locais no repositório remoto.
 
 #### Git Merge
 
@@ -309,12 +317,11 @@ git merge <branch_a_realizar_merge>
 
 Para realizar o merge, é necessário estar no branch que deverá receber as alterações. O merge pode acontecer de forma automática ou exigir uma ação manual. O merge automático será feito em arquivos textos que não sofreram alterações nas mesmas linhas, já o merge manual será feito em arquivos textos que sofreram alterações nas mesmas linhas, onde será necessário intervenção e realização de um novo commit após esta intevenção.
 
-----
+---
 
 ## Referências:
 
  - https://gist.github.com/leocomelli/2545add34e4fec21ec16
  - https://comandosgit.github.io/
- - https://rogerdudler.github.io/git-guide/index.pt_BR.html
- - https://tableless.com.br/tudo-que-voce-queria-saber-sobre-git-e-github-mas-tinha-vergonha-de-perguntar/
+ - https:Criar todas as tags locais no repositório remoto./
 
