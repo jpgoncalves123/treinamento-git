@@ -323,5 +323,6 @@ Para realizar o merge, é necessário estar no branch que deverá receber as alt
 
  - https://gist.github.com/leocomelli/2545add34e4fec21ec16
  - https://comandosgit.github.io/
- - https:Criar todas as tags locais no repositório remoto./
+ - https://rogerdudler.github.io/git-guide/index.pt_BR.html
+ - https://tableless.com.br/tudo-que-voce-queria-saber-sobre-git-e-github-mas-tinha-vergonha-de-perguntar/
 
