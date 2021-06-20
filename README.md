@@ -239,7 +239,7 @@ Usamos o git checkout principalmente para alternar de um branch para outro. Tamb
 ```
 git checkout <nome-do-branch>
 ```
-Cria um novo branch.
+Altera árvore de trabalho para outra branch.
 
 
 ```
