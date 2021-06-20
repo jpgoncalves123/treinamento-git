@@ -168,14 +168,14 @@ git commit -m "Mensagem explicativa da alteração realizada"
 ```
 Este comando é como definir um ponto de verificação no processo de desenvolvimento, para o qual você pode voltar mais tarde se necessário. Quando é feito o *git commit* as alterações são confirmadas apenas no repositório local.  
 
-#### Git Pull
+#### Git Push
 ```
 git push <remote> <nome-do-branch>
 git push origin main
 ```
-Este comando é como definir um ponto de verificação no processo de desenvolvimento, para o qual você pode voltar mais tarde, se necessário. Quando é feito o *git commit* as alterações são confirmadas apenas no repositório local.  
+Este comando é utilizado para enviar o commit da sua branch no repositório local para uma branch em um repositório remoto.
 
-#### Git Push
+#### Git Pull
 ```
 git pull <remote>
 git pull origin
