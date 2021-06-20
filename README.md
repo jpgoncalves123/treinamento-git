@@ -285,7 +285,7 @@ Exibe histórico modificação de um ficheiro
 
 #### Git Tags
 
-Tags são utilizadas normalmente para marcar o ponto de uma determina versão da aplicação, desta forma, é possível seguir na mesma branch principal e conseguir voltar para pontos de versão apenas utilizando as tags.
+Tags são utilizadas normalmente para marcar um ponto que determina a versão da aplicação, desta forma, é possível seguir na mesma branch principal e conseguir voltar para pontos de versão apenas utilizando as tags.
 
 ```
 git tag v1.1 -m "descricao"
